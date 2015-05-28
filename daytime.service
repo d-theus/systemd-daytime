@@ -1,0 +1,11 @@
+[Unit]
+Description=Daytime (aka RFC 867) server
+After=network.target
+
+[Service]
+Type=simple
+PIDFile=/tmp/daytime.pid
+ExecStart=/usr/bin/daytime-server.py
+
+[Install]
+WantedBy=multi-user.target
